@@ -32,10 +32,6 @@ app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
 
-app.get('/blog', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'blog.html'));
-});
-
 app.get('/api/posts', (req, res) => {
     const posts = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'posts.json')));
     res.json(posts);
