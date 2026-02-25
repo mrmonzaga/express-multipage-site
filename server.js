@@ -15,14 +15,17 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-res.sendFile(path.join(__dirname, 'views', 'about.html'));
-
+    res.sendFile(path.join(__dirname, 'views', 'about.html'));
 });
 
 app.get('/contact', (req, res) => {
-res.sendFile(path.join(__dirname, 'views', 'contact.html'));
-
+    res.sendFile(path.join(__dirname, 'views', 'contact.html'));
 });
+
+app.get('/blog', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'blog.html'));
+});
+
 
 // Start the server
 app.listen(PORT, () => {
