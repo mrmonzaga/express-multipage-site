@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started with Express",
+    "author": "Roella Monzaga",
+    "date": "2025-03-01",
+    "content": "Express is a minimal and flexible Node.js web application framework."
+  },
+  {
+    "id": 2,
+    "title": "Understanding REST APIs",
+    "author": "Mary Ardientes",
+    "date": "2025-03-05",
+    "content": "REST APIs allow communication between client and server using HTTP methods."
+  },
+  {
+    "id": 3,
+    "title": "Node.js Best Practices",
+    "author": "Marvin Munoz",
+    "date": "2025-03-10",
+    "content": "Writing clean and efficient Node.js code is essential for scalable applications."
+  }
+]

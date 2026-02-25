@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/blog">Blog</a>
+    </nav>
+
+    <h1>Blog Posts</h1>
+    <div id="blog-container"></div>
+
+    <script>
+        fetch('/api/posts')
+            .then(res => res.json())
+            .then(posts => {
+                const container = document.getElementById('blog-container');
+                posts.forEach(post => {
+                    container.innerHTML += `
+                        <div class="post">
+                            <h2>${post.title}</h2>
+                            <p><strong>Author:</strong> ${post.author}</p>
+                            <p><strong>Date:</strong> ${post.date}</p>
+                            <p>${post.content}</p>
+                        </div>
+                    `;
+                });
+            });
+    </script>
+</body>
+</html>
